@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <script>
+            
+            
+            for (let row = 1; row <= 8; row ++) {
+                let rowDiv = document.createElement("div");
+                $(rowDiv).css("display", "block").css("margin", "auto").height(36).width("100%").css("padding", 0);
+                for (let column = 1; column <= 8; column++) {
+                    let black = document.createElement("div");
+                    $(black).css("background-color", "black").css("float", "left").height(30).width(30).css("border-style", "solid");
+                    let white = document.createElement("div");
+                    $(white).css("background-color", "white").css("float", "left").height(30).width(30).css("border-style", "solid");
+                    if (row % 2 != 0 && column % 2 == 0) {
+                        $(rowDiv).append(black);
+                    } else if (row % 2 == 0 && column % 2 != 0) {
+                        $(rowDiv).append(black);
+                    } else {
+                        $(rowDiv).append(white);
+                    }
+                }
+                $("body").append(rowDiv);
+            }
+        </script>
+    </body>
+</html>

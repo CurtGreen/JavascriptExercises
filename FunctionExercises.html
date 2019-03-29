@@ -1,0 +1,49 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function minOfTwo(a, b) {
+                if (a <= b){
+                    return a;
+                } else {
+                    return b;
+                }
+            }
+
+            console.log("Minimum of 5 & 15 : " + minOfTwo(5, 15));
+
+            function isEven(number) {
+                if (number == 1) {
+                    return false;
+                } else if (number > 0) {
+                    return isEven(number -2);
+                } else if (number == 0) {
+                    return true;
+                } else {
+                    return isEven(number + 2);
+                }
+            }
+
+            console.log("6 is even? " + isEven(6));
+            console.log("5 is even? " + isEven(5));
+            console.log("-6 is even? " + isEven(-6));
+            console.log("-5 is even? " + isEven(-5));
+
+
+            function countChar(data, character = "B") {
+                let count = 0;
+                for(let i = 0; i < data.length; i++){
+                    if(data[i] === character){
+                        count++;
+                    }
+                }
+                return count;
+            }
+
+            console.log("There are how many c's in connection? Answer: " + countChar("connection", "c"));
+            console.log("There are how many b's in connection? Answer: " + countChar("connection", "b"));
+        </script>
+    </body>
+</html>

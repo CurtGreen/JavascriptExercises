@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+      <script>
+          var end = false;
+          function sideEffectEnd() {
+            end = true;
+          }
+
+          $(document).ready(() => {$("body").click(sideEffectEnd());});
+
+          while(!end){
+            setTimeout(()=>{document.write("A\n");}, 1000);
+  
+          }
+          document.wrtie("The loop has terminated!");
+      </script>     
+
+    </body>
+</html>

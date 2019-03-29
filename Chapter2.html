@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <script>
+            // Triangle exercise
+            for (let bottom  = 0; bottom < 10; bottom++){
+                let row = '';
+                for(let i = 1; i <= bottom; i++){
+                    row += '#';
+                }
+                document.write("<p>" + row + "</p>");
+            }
+
+
+            // FizzBuzz exercise
+            for (let count = 1; count <= 100; count++) {
+
+                if (count % 3 == 0 && count % 5 == 0) {
+                    document.write("<p>FizzBuzz</p>");
+                } else if (count % 3 == 0) {
+                    document.write("<p>Fizz</p>");
+                } else if (count % 5 == 0) {
+                    document.write("<p>Buzz</p>");
+                } else {
+                    document.write("<p>" + count + "</p>");
+                }
+            }
+
+            // Checkboard exercise
+            let checkboard = "";
+            for (let row = 1; row <= 8; row ++) {
+                
+                for (let column = 1; column <= 8; column++) {
+                    if (row % 2 != 0 && column % 2 == 0) {
+                        checkboard += "#";
+                    } else if (row % 2 == 0 && column % 2 != 0) {
+                        checkboard += "#";
+                    } else {
+                        checkboard += " ";
+                    }
+                }
+                checkboard += "\n";
+            }
+            console.log(checkboard);
+        </script>
+    </body>
+</html>

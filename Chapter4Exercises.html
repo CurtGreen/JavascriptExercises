@@ -1,0 +1,81 @@
+<html>
+    <head>
+            
+            <script>
+                // Sum of Range Exercise
+                function rangeArray(start, end, step = 1) {
+                    let arrayNums = [];
+                    for(let i = start; i <= end; i+=step){
+                        arrayNums.push(i);
+                    }
+                    return arrayNums;
+                }
+
+                function sumOf(numberArray) {
+                    let total = 0;
+                    for(each of numberArray) {
+                        total += each;
+                    }
+                    return total;
+                }
+
+                console.log(sumOf(rangeArray(1,10)));
+
+                // Reversing an Array
+                function reverseArray(anArray){
+                    let reversed = [];
+                    let original = anArray.concat();
+                    
+                    let numElems = anArray.length;
+                    for( i = 0; i<numElems; i++) {
+                        reversed.push(anArray.pop());
+                    }
+                    
+                    for( i = 0; i < numElems; i++){
+                        anArray.push(original.shift());
+                    }
+                    
+                    return reversed;
+                }
+
+                function reverseArrayInPlace(anArray){
+                    let reversed = [];
+                    let numElems = anArray.length;
+                    for( i = 0; i<numElems; i++) {
+                        reversed.push(anArray.pop());
+                    }
+                  
+                    for( i = 0; i < numElems; i++){
+                        anArray.push(reversed.shift());
+                    }
+                    
+                }
+
+                function reverseArrayInPlace2(anArray){
+                    let reversed = [];
+                    let numElems = anArray.length;
+                    for( i = 0; i<(numElems/2); i++) {
+                        let temp = anArray[(numElems - i)-1];
+                        
+                        anArray[(numElems - i) - 1] = anArray[i];
+                        anArray[i] = temp;
+                    }
+                    
+                }
+
+
+                let testArray = [10, 20, 30, 40, 50];
+                console.log("Test Array Contains: "+testArray);
+                console.log("reverseArray Returns: " + reverseArray(testArray));
+                console.log("Test Array Contains: " + testArray);
+                reverseArrayInPlace(testArray);
+                console.log("After reversing in place Test Array contains: " + testArray);
+                reverseArrayInPlace2(testArray);
+                console.log("After Refactored in Place Reversal: " + testArray);
+            </script>
+    </head>
+    <body>
+        
+
+    </body>
+</html>
